@@ -14,6 +14,8 @@ declare const process: { env: Record<string, string | undefined> };
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+
+ 
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
