@@ -27,8 +27,15 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
   use: {
+
+    /// login state storage for all the tests in this project.
+    storageState: 'playwright/.auth/user.json',
+
+  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+
+    
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -57,6 +64,9 @@ export default defineConfig({
     // {
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
+
+    // storage state
+
     // },
     // {
     //   name: 'Mobile Safari',
